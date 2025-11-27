@@ -42,9 +42,7 @@ export default async function OrdersPage({ params: { locale } }: { params: { loc
                         </tr>
                     </thead>
                     <tbody>
-                        import CopyButton from '@/components/CopyButton';
 
-                        // ... (inside component)
                         {orders.map(order => (
                             <tr key={order.id} style={{ borderBottom: '1px solid var(--glass-border)' }}>
                                 <td style={{ padding: '1rem', fontFamily: 'monospace', fontSize: '0.9rem' }}>
