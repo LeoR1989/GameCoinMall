@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    container_name: game-coin-mall
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=file:./dev.db
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=supersecretkey123
+    volumes:
+      - ./prisma/dev.db:/app/prisma/dev.db
+      - ./public/uploads:/app/public/uploads
