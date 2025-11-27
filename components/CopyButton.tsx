@@ -11,12 +11,33 @@ export default function CopyButton({ text }: { text: string }) {
 
     const handleCopy = async () => {
         try {
-            await navigator.clipboard.writeText(text);
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(text);
+            } else {
+                // Fallback for non-secure contexts (HTTP)
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                textArea.style.top = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.error('Fallback: Oops, unable to copy', err);
+                    throw err;
+                }
+                document.body.removeChild(textArea);
+            }
+
             setCopied(true);
             showToast(t('copySuccess'), 'success');
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
             console.error('Failed to copy:', err);
+            showToast('Failed to copy', 'error');
         }
     };
 
