@@ -80,5 +80,14 @@
         "status_PAID": "已支付",
         "status_SHIPPED": "已发货",
         "deliveryEmail": "收货邮箱"
+    },
+    "PurchaseGuide": {
+        "title": "下单流程",
+        "step1_title": "第1步",
+        "step1_desc": "选择商品点击购买",
+        "step2_title": "第2步",
+        "step2_desc": "填写数量和收货邮箱，进行支付",
+        "step3_title": "第3步",
+        "step3_desc": "支付完成，等待发货（一般1~3个工作日）"
     }
 }

@@ -54,6 +54,15 @@
         "status_SHIPPED": "Shipped",
         "deliveryEmail": "Delivery Email"
     },
+    "PurchaseGuide": {
+        "title": "Order Process",
+        "step1_title": "Step 1",
+        "step1_desc": "Select product and click buy",
+        "step2_title": "Step 2",
+        "step2_desc": "Enter quantity and email, then pay",
+        "step3_title": "Step 3",
+        "step3_desc": "Payment complete, wait for delivery (1-3 days)"
+    },
     "Admin": {
         "dashboardTitle": "Admin Dashboard",
         "dashboardDesc": "Manage orders and products here.",

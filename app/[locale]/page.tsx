@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import prisma from '@/lib/prisma';
 import ProductCard from '@/components/ProductCard';
+import PurchaseGuide from '@/components/PurchaseGuide';
 
 async function getProducts() {
     try {
@@ -29,9 +30,11 @@ export default async function Index() {
                 }}>
                     {t('title')}
                 </h1>
-                <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
+                <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
                     {t('description')}
                 </p>
+
+                <PurchaseGuide />
             </div>
 
             <div style={{
