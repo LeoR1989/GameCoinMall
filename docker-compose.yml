@@ -9,7 +9,7 @@ services:
       - "3000:3000"
     environment:
       - DATABASE_URL=file:./dev.db
-      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_URL=http://47.238.70.55:3000
       - NEXTAUTH_SECRET=supersecretkey123
     volumes:
       - ./prisma/dev.db:/app/prisma/dev.db

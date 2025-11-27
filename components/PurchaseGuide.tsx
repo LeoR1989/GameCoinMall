@@ -55,15 +55,14 @@ export default function PurchaseGuide() {
                 }} />
             </div>
 
-            {/* Steps Container */}
             <div style={{
                 flex: 1,
                 display: 'flex',
-                justifyContent: 'space-around',
+                justifyContent: 'space-between', // Changed from space-around
                 alignItems: 'center',
-                padding: '1.5rem 2rem',
-                flexWrap: 'wrap',
-                gap: '1rem'
+                padding: '1rem 1.5rem', // Reduced padding
+                flexWrap: 'nowrap', // Prevent wrapping
+                gap: '0.5rem' // Reduced gap
             }}>
                 <Step number="1" title={t('step1_title')} desc={t('step1_desc')} />
                 <Chevron />
@@ -77,11 +76,11 @@ export default function PurchaseGuide() {
 
 function Step({ number, title, desc }: { number: string, title: string, desc: string }) {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', maxWidth: '220px' }}>
-            <div style={{ fontSize: '0.9rem', color: 'var(--primary-blue)', fontWeight: 700, textTransform: 'uppercase' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', flex: 1, minWidth: 0 }}>
+            <div style={{ fontSize: '0.85rem', color: 'var(--primary-blue)', fontWeight: 700, textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
                 {title}
             </div>
-            <div style={{ fontSize: '1rem', fontWeight: 500, lineHeight: '1.4', color: '#e2e8f0' }}>
+            <div style={{ fontSize: '0.9rem', fontWeight: 500, lineHeight: '1.3', color: '#e2e8f0', whiteSpace: 'nowrap' }}>
                 {desc}
             </div>
         </div>

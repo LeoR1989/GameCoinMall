@@ -84,7 +84,7 @@
         "deliveryEmail": "收货邮箱"
     },
     "PurchaseGuide": {
-        "title": "下单流程",
+        "title": "购买流程",
         "step1_title": "第1步",
         "step1_desc": "选择商品点击购买",
         "step2_title": "第2步",
