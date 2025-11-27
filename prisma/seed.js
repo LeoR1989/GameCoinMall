@@ -1,5 +1,4 @@
 const { PrismaClient } = require('@prisma/client');
-const { hash } = require('bcryptjs');
 
 const prisma = new PrismaClient();
 
@@ -19,16 +18,13 @@ async function main() {
 
     console.log('Seeding products...');
     for (const p of products) {
-        // Use upsert to avoid duplicates
-        // Since we don't have a unique slug, we'll try to find by name first or just create
-        // For simplicity in this script, let's just create if not exists, but we don't have a unique constraint on name.
-        // Let's delete all first to be safe? No, that's dangerous.
-        // Let's just create.
         await prisma.product.create({ data: p });
     }
 
     console.log('Seeding admin user...');
-    const password = await hash('admin123', 10);
+    // Hash for 'admin123'
+    const password = '$2a$12$aUVAsoiDXVK44l5SiA7t1OSd7qQD/rQSeB4QZ5R4QN8JtcO2xkkCu';
+
     await prisma.user.upsert({
         where: { email: 'admin@example.com' },
         update: {},
