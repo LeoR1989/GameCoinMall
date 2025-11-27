@@ -50,8 +50,10 @@
         "quantity": "الكمية",
         "status": "الحالة",
         "date": "التاريخ",
-        "status_PAID": "مدفوع",
+        "status_PAID": "قيد الانتظار",
         "status_SHIPPED": "تم الشحن",
+        "tooltip_PAID": "عادة 1-3 أيام عمل",
+        "tooltip_SHIPPED": "يرجى التحقق من بريدك الإلكتروني",
         "deliveryEmail": "البريد الإلكتروني للتسليم"
     },
     "PurchaseGuide": {

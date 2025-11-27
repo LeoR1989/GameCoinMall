@@ -48,13 +48,16 @@ export default async function OrdersPage({ params: { locale } }: { params: { loc
                                 <td style={{ padding: '1rem' }}>${order.price.toFixed(2)}</td>
                                 <td style={{ padding: '1rem' }}>{order.deliveryEmail || '-'}</td>
                                 <td style={{ padding: '1rem' }}>
-                                    <span style={{
-                                        padding: '0.25rem 0.5rem',
-                                        borderRadius: '4px',
-                                        background: order.status === 'PAID' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(252, 163, 17, 0.2)',
-                                        color: order.status === 'PAID' ? 'var(--success-green)' : 'var(--accent-color)',
-                                        whiteSpace: 'nowrap'
-                                    }}>
+                                    <span
+                                        title={t(`tooltip_${order.status}`)}
+                                        style={{
+                                            padding: '0.25rem 0.5rem',
+                                            borderRadius: '4px',
+                                            background: order.status === 'PAID' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(252, 163, 17, 0.2)',
+                                            color: order.status === 'PAID' ? 'var(--success-green)' : 'var(--accent-color)',
+                                            whiteSpace: 'nowrap',
+                                            cursor: 'help'
+                                        }}>
                                         {t(`status_${order.status}`)}
                                     </span>
                                 </td>

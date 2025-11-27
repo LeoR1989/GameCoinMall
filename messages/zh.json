@@ -77,8 +77,10 @@
         "quantity": "数量",
         "status": "状态",
         "date": "日期",
-        "status_PAID": "已支付",
+        "status_PAID": "待发货",
         "status_SHIPPED": "已发货",
+        "tooltip_PAID": "一般1~3个工作日",
+        "tooltip_SHIPPED": "请在收货邮箱中查看",
         "deliveryEmail": "收货邮箱"
     },
     "PurchaseGuide": {
