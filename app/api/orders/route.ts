@@ -24,6 +24,12 @@ export async function POST(req: Request) {
             return NextResponse.json({ message: "Product not found" }, { status: 404 });
         }
 
+        // Verify user exists (to handle session/db mismatch)
+        const user = await prisma.user.findUnique({ where: { id: session.user.id } });
+        if (!user) {
+            return NextResponse.json({ message: "User not found. Please logout and login again." }, { status: 401 });
+        }
+
         const order = await prisma.order.create({
             data: {
                 userId: session.user.id,
