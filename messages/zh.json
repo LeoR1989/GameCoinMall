@@ -76,6 +76,7 @@
         "product": "商品",
         "price": "价格",
         "quantity": "数量",
+        "totalPrice": "总价",
         "status": "状态",
         "date": "日期",
         "status_PAID": "待发货",

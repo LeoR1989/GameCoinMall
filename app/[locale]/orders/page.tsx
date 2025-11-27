@@ -34,6 +34,7 @@ export default async function OrdersPage({ params: { locale } }: { params: { loc
                             <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('product')}</th>
                             <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('quantity')}</th>
                             <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('price')}</th>
+                            <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('totalPrice')}</th>
                             <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('deliveryEmail')}</th>
                             <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('status')}</th>
                             <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('date')}</th>
@@ -46,6 +47,7 @@ export default async function OrdersPage({ params: { locale } }: { params: { loc
                                 <td style={{ padding: '1rem' }}>{order.product.name}</td>
                                 <td style={{ padding: '1rem' }}>{order.quantity || 1}</td>
                                 <td style={{ padding: '1rem' }}>${order.price.toFixed(2)}</td>
+                                <td style={{ padding: '1rem' }}>${(order.price * (order.quantity || 1)).toFixed(2)}</td>
                                 <td style={{ padding: '1rem' }}>{order.deliveryEmail || '-'}</td>
                                 <td style={{ padding: '1rem' }}>
                                     <span

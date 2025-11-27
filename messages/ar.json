@@ -48,6 +48,7 @@
         "product": "المنتج",
         "price": "السعر",
         "quantity": "الكمية",
+        "totalPrice": "السعر الإجمالي",
         "status": "الحالة",
         "date": "التاريخ",
         "status_PAID": "قيد الانتظار",

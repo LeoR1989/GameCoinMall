@@ -48,6 +48,7 @@
         "product": "Product",
         "price": "Price",
         "quantity": "Quantity",
+        "totalPrice": "Total Price",
         "status": "Status",
         "date": "Date",
         "status_PAID": "Pending Shipment",
