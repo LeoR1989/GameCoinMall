@@ -3,6 +3,7 @@ import { authOptions } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import prisma from '@/lib/prisma';
 import { getTranslations } from 'next-intl/server';
+import CopyButton from '@/components/CopyButton';
 
 async function getOrders(userId: string) {
     return await prisma.order.findMany({
@@ -41,9 +42,15 @@ export default async function OrdersPage({ params: { locale } }: { params: { loc
                         </tr>
                     </thead>
                     <tbody>
+                        import CopyButton from '@/components/CopyButton';
+
+                        // ... (inside component)
                         {orders.map(order => (
                             <tr key={order.id} style={{ borderBottom: '1px solid var(--glass-border)' }}>
-                                <td style={{ padding: '1rem' }}>{order.id.substring(0, 8)}...</td>
+                                <td style={{ padding: '1rem', fontFamily: 'monospace', fontSize: '0.9rem' }}>
+                                    {order.id}
+                                    <CopyButton text={order.id} />
+                                </td>
                                 <td style={{ padding: '1rem' }}>{order.product.name}</td>
                                 <td style={{ padding: '1rem' }}>{order.quantity || 1}</td>
                                 <td style={{ padding: '1rem' }}>${order.price.toFixed(2)}</td>

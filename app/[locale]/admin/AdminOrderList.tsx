@@ -15,6 +15,7 @@ interface Order {
 }
 
 import { useToast } from '@/components/ToastContext';
+import CopyButton from '@/components/CopyButton';
 
 export default function AdminOrderList({ orders }: { orders: Order[] }) {
     const t = useTranslations('Admin');
@@ -62,7 +63,10 @@ export default function AdminOrderList({ orders }: { orders: Order[] }) {
                 <tbody>
                     {orderList.map(order => (
                         <tr key={order.id} style={{ borderBottom: '1px solid var(--glass-border)' }}>
-                            <td style={{ padding: '1rem' }}>{order.id.substring(0, 8)}...</td>
+                            <td style={{ padding: '1rem', fontFamily: 'monospace', fontSize: '0.9rem' }}>
+                                {order.id}
+                                <CopyButton text={order.id} />
+                            </td>
                             <td style={{ padding: '1rem' }}>{order.user.email}</td>
                             <td style={{ padding: '1rem' }}>{order.deliveryEmail || '-'}</td>
                             <td style={{ padding: '1rem' }}>{order.product.name}</td>
