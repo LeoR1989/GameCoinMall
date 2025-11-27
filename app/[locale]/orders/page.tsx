@@ -22,7 +22,7 @@ export default async function OrdersPage({ params: { locale } }: { params: { loc
     const t = await getTranslations('Orders');
 
     return (
-        <div style={{ maxWidth: '800px', margin: '2rem auto', padding: '1rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '2rem auto', padding: '1rem' }}>
             <h1>{t('title')}</h1>
             {orders.length === 0 ? (
                 <p>{t('noOrders')}</p>
