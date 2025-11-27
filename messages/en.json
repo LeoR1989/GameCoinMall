@@ -1,0 +1,84 @@
+{
+    "Index": {
+        "title": "PUBG Mobile UC Shop",
+        "description": "Buy PUBG Mobile UC instantly with secure payment.",
+        "login": "Login",
+        "register": "Register",
+        "products": "Products",
+        "buy": "Buy Now",
+        "quantity": "Quantity",
+        "total": "Total",
+        "pay": "Pay",
+        "invalidEmail": "Please enter a valid email address",
+        "paymentSuccess": "Payment Successful!",
+        "paymentFailed": "Payment Failed"
+    },
+    "Auth": {
+        "loginTitle": "Login",
+        "registerTitle": "Register",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Submit",
+        "haveAccount": "Already have an account? Login",
+        "noAccount": "No account? Register"
+    },
+    "Navigation": {
+        "brand": "GuGuk Shop",
+        "home": "Home",
+        "orders": "Orders",
+        "admin": "Admin",
+        "products": "Products",
+        "finance": "Finance",
+        "login": "Login",
+        "logout": "Logout"
+    },
+    "Finance": {
+        "title": "Financial Accounting",
+        "totalRevenue": "Total Revenue",
+        "totalOrders": "Total Orders",
+        "totalUsers": "Total Users",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "filter": "Filter"
+    },
+    "Orders": {
+        "title": "Order History",
+        "noOrders": "No orders found.",
+        "orderId": "Order ID",
+        "product": "Product",
+        "price": "Price",
+        "quantity": "Quantity",
+        "status": "Status",
+        "date": "Date",
+        "status_PAID": "Paid",
+        "status_SHIPPED": "Shipped",
+        "deliveryEmail": "Delivery Email"
+    },
+    "Admin": {
+        "dashboardTitle": "Admin Dashboard",
+        "dashboardDesc": "Manage orders and products here.",
+        "orderId": "Order ID",
+        "user": "User",
+        "product": "Product",
+        "quantity": "Quantity",
+        "status": "Status",
+        "actions": "Actions",
+        "markShipped": "Mark as Shipped",
+        "status_PAID": "Paid",
+        "status_SHIPPED": "Shipped",
+        "deliveryEmail": "Delivery Email",
+        "confirmShip": "Confirm shipping for"
+    },
+    "Checkout": {
+        "title": "Checkout",
+        "quantity": "Quantity",
+        "deliveryEmail": "Delivery Email",
+        "emailPlaceholder": "Enter your email address",
+        "emailRequired": "Email is required",
+        "invalidEmail": "Please enter a valid email address",
+        "total": "Total",
+        "pay": "Pay",
+        "paymentSuccess": "Payment Successful!",
+        "paymentFailed": "Payment Failed"
+    }
+}

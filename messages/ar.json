@@ -1,0 +1,84 @@
+{
+    "Index": {
+        "title": "متجر PUBG Mobile UC",
+        "description": "اشتري PUBG Mobile UC فوراً وبأمان.",
+        "login": "تسجيل الدخول",
+        "register": "تسجيل",
+        "products": "المنتجات",
+        "buy": "اشتري الآن",
+        "quantity": "الكمية",
+        "total": "المجموع",
+        "pay": "دفع",
+        "invalidEmail": "يرجى إدخال عنوان بريد إلكتروني صالح",
+        "paymentSuccess": "تم الدفع بنجاح!",
+        "paymentFailed": "فشل الدفع"
+    },
+    "Auth": {
+        "loginTitle": "تسجيل الدخول",
+        "registerTitle": "تسجيل",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "submit": "إرسال",
+        "haveAccount": "لديك حساب؟ تسجيل الدخول",
+        "noAccount": "ليس لديك حساب؟ تسجيل"
+    },
+    "Navigation": {
+        "brand": "GuGuk Shop",
+        "home": "الرئيسية",
+        "orders": "طلباتي",
+        "admin": "لوحة الإدارة",
+        "products": "المنتجات",
+        "finance": "المالية",
+        "login": "تسجيل الدخول",
+        "logout": "تسجيل الخروج"
+    },
+    "Finance": {
+        "title": "المحاسبة المالية",
+        "totalRevenue": "إجمالي الإيرادات",
+        "totalOrders": "إجمالي الطلبات",
+        "totalUsers": "إجمالي المستخدمين",
+        "startDate": "تاريخ البدء",
+        "endDate": "تاريخ الانتهاء",
+        "filter": "تصفية"
+    },
+    "Orders": {
+        "title": "سجل الطلبات",
+        "noOrders": "لم يتم العثور على طلبات.",
+        "orderId": "رقم الطلب",
+        "product": "المنتج",
+        "price": "السعر",
+        "quantity": "الكمية",
+        "status": "الحالة",
+        "date": "التاريخ",
+        "status_PAID": "مدفوع",
+        "status_SHIPPED": "تم الشحن",
+        "deliveryEmail": "بريد التسليم"
+    },
+    "Admin": {
+        "dashboardTitle": "لوحة التحكم",
+        "dashboardDesc": "إدارة الطلبات والمنتجات هنا.",
+        "orderId": "رقم الطلب",
+        "user": "المستخدم",
+        "product": "المنتج",
+        "quantity": "الكمية",
+        "status": "الحالة",
+        "actions": "إجراءات",
+        "markShipped": "تحديد كمشحون",
+        "status_PAID": "مدفوع",
+        "status_SHIPPED": "تم الشحن",
+        "deliveryEmail": "بريد التسليم",
+        "confirmShip": "تأكيد الشحن لـ"
+    },
+    "Checkout": {
+        "title": "الدفع",
+        "quantity": "الكمية",
+        "deliveryEmail": "بريد التسليم",
+        "emailPlaceholder": "أدخل عنوان بريدك الإلكتروني",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "invalidEmail": "يرجى إدخال عنوان بريد إلكتروني صالح",
+        "total": "المجموع",
+        "pay": "دفع",
+        "paymentSuccess": "تم الدفع بنجاح!",
+        "paymentFailed": "فشل الدفع"
+    }
+}

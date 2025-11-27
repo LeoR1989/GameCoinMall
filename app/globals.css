@@ -1,0 +1,198 @@
+:root {
+  /* PUBG / Gaming Theme Colors */
+  --bg-primary: #0f1014;
+  --bg-secondary: #1a1c23;
+  --bg-card: #23262f;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent-color: #fca311;
+  /* Gold/Orange */
+  --accent-hover: #e5940c;
+  --primary-blue: #3b82f6;
+  --success-green: #10b981;
+  --danger-red: #ef4444;
+
+  --glass-bg: rgba(35, 38, 47, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  /* Increased radius */
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  /* Larger touch target */
+  border-radius: 12px;
+  /* Rounder buttons */
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 0.8rem 1rem;
+  /* Larger padding */
+  border-radius: 12px;
+  /* Rounder inputs */
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+.bottom-nav {
+  display: none !important;
+  /* Hidden by default on desktop */
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .bottom-nav {
+    display: flex !important;
+  }
+
+  body {
+    padding-bottom: 80px;
+    /* Space for bottom nav */
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,84 @@
+{
+    "Index": {
+        "title": "PUBG Mobile UC 商城",
+        "description": "安全快捷购买 PUBG Mobile UC。",
+        "login": "登录",
+        "register": "注册",
+        "products": "商品列表",
+        "buy": "立即购买",
+        "quantity": "数量",
+        "total": "总计",
+        "pay": "支付",
+        "invalidEmail": "请输入有效的邮箱地址",
+        "paymentSuccess": "支付成功！",
+        "paymentFailed": "支付失败"
+    },
+    "Auth": {
+        "loginTitle": "用户登录",
+        "registerTitle": "用户注册",
+        "email": "邮箱",
+        "password": "密码",
+        "submit": "提交",
+        "haveAccount": "已有账号？去登录",
+        "noAccount": "没有账号？去注册"
+    },
+    "Admin": {
+        "dashboardTitle": "管理后台",
+        "dashboardDesc": "在此管理订单和商品。",
+        "orderId": "订单号",
+        "user": "用户",
+        "product": "商品",
+        "quantity": "数量",
+        "status": "状态",
+        "actions": "操作",
+        "markShipped": "标记发货",
+        "status_PAID": "已支付",
+        "status_SHIPPED": "已发货",
+        "deliveryEmail": "收货邮箱",
+        "confirmShip": "确认发货给"
+    },
+    "Checkout": {
+        "title": "收银台",
+        "quantity": "数量",
+        "deliveryEmail": "收货邮箱",
+        "emailPlaceholder": "请输入您的邮箱地址",
+        "emailRequired": "邮箱不能为空",
+        "invalidEmail": "请输入有效的邮箱地址",
+        "total": "总计",
+        "pay": "支付",
+        "paymentSuccess": "支付成功！",
+        "paymentFailed": "支付失败"
+    },
+    "Navigation": {
+        "brand": "GuGuk 商城",
+        "home": "首页",
+        "orders": "我的订单",
+        "admin": "管理后台",
+        "products": "商品管理",
+        "finance": "财务核算",
+        "login": "登录",
+        "logout": "退出"
+    },
+    "Finance": {
+        "title": "财务核算",
+        "totalRevenue": "总收入",
+        "totalOrders": "总订单数",
+        "totalUsers": "下单用户数",
+        "startDate": "开始日期",
+        "endDate": "结束日期",
+        "filter": "筛选"
+    },
+    "Orders": {
+        "title": "历史订单",
+        "noOrders": "暂无订单。",
+        "orderId": "订单号",
+        "product": "商品",
+        "price": "价格",
+        "quantity": "数量",
+        "status": "状态",
+        "date": "日期",
+        "status_PAID": "已支付",
+        "status_SHIPPED": "已发货",
+        "deliveryEmail": "收货邮箱"
+    }
+}
