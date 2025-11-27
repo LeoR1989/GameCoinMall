@@ -11,7 +11,9 @@
         "pay": "Pay",
         "invalidEmail": "Please enter a valid email address",
         "paymentSuccess": "Payment Successful!",
-        "paymentFailed": "Payment Failed"
+        "paymentFailed": "Payment Failed",
+        "logout": "Logout",
+        "copySuccess": "Order ID copied successfully"
     },
     "Auth": {
         "loginTitle": "Login",

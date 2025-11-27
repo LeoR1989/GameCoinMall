@@ -1,14 +1,19 @@
 'use client';
 
 import { useState } from 'react';
+import { useToast } from '@/components/ToastContext';
+import { useTranslations } from 'next-intl';
 
 export default function CopyButton({ text }: { text: string }) {
     const [copied, setCopied] = useState(false);
+    const { showToast } = useToast();
+    const t = useTranslations('Common');
 
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(text);
             setCopied(true);
+            showToast(t('copySuccess'), 'success');
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
             console.error('Failed to copy:', err);
@@ -29,7 +34,7 @@ export default function CopyButton({ text }: { text: string }) {
                 color: copied ? 'var(--success-green)' : 'var(--text-secondary)',
                 transition: 'color 0.2s'
             }}
-            title={copied ? "Copied!" : "Copy Order ID"}
+            title={copied ? t('copySuccess') : "Copy Order ID"}
         >
             {copied ? (
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -38,7 +43,7 @@ export default function CopyButton({ text }: { text: string }) {
             ) : (
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2-2v1"></path>
                 </svg>
             )}
         </button>
