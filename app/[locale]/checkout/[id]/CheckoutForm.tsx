@@ -60,7 +60,8 @@ export default function CheckoutForm({ product, locale }: { product: any, locale
                 router.push(`/${locale}/orders`);
                 router.refresh();
             } else {
-                showToast(t('paymentFailed'), 'error');
+                const data = await res.json();
+                showToast(data.error || data.message || t('paymentFailed'), 'error');
             }
         } catch (e) {
             showToast(t('paymentFailed'), 'error');

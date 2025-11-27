@@ -35,6 +35,7 @@ export async function POST(req: Request) {
         });
         return NextResponse.json(order);
     } catch (e) {
-        return NextResponse.json({ message: "Error" }, { status: 500 });
+        console.error("Order creation error:", e);
+        return NextResponse.json({ message: "Error creating order", error: String(e) }, { status: 500 });
     }
 }
