@@ -11,6 +11,7 @@ interface Order {
     createdAt: Date | string;
     deliveryEmail?: string | null;
     quantity?: number;
+    price: number;
 }
 
 import { useToast } from '@/components/ToastContext';
@@ -53,6 +54,7 @@ export default function AdminOrderList({ orders }: { orders: Order[] }) {
                         <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('deliveryEmail')}</th>
                         <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('product')}</th>
                         <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('quantity')}</th>
+                        <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('totalPrice')}</th>
                         <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('status')}</th>
                         <th style={{ padding: '1rem', color: 'var(--text-secondary)' }}>{t('actions')}</th>
                     </tr>
@@ -65,6 +67,7 @@ export default function AdminOrderList({ orders }: { orders: Order[] }) {
                             <td style={{ padding: '1rem' }}>{order.deliveryEmail || '-'}</td>
                             <td style={{ padding: '1rem' }}>{order.product.name}</td>
                             <td style={{ padding: '1rem' }}>{order.quantity || 1}</td>
+                            <td style={{ padding: '1rem' }}>${(order.price * (order.quantity || 1)).toFixed(2)}</td>
                             <td style={{ padding: '1rem' }}>
                                 <span style={{
                                     padding: '0.25rem 0.5rem',

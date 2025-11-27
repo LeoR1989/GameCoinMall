@@ -72,6 +72,7 @@
         "user": "User",
         "product": "Product",
         "quantity": "Quantity",
+        "totalPrice": "Total Price",
         "status": "Status",
         "actions": "Actions",
         "markShipped": "Mark as Shipped",

@@ -29,6 +29,7 @@
         "user": "用户",
         "product": "商品",
         "quantity": "数量",
+        "totalPrice": "总价",
         "status": "状态",
         "actions": "操作",
         "markShipped": "标记发货",
