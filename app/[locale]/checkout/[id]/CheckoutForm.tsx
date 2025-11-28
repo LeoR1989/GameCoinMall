@@ -6,12 +6,14 @@ import { useRouter } from 'next/navigation';
 import { useToast } from '@/components/ToastContext';
 
 import { useTranslations } from 'next-intl';
+import PaymentModal from './PaymentModal';
 
 export default function CheckoutForm({ product, locale }: { product: any, locale: string }) {
     const [loading, setLoading] = useState(false);
     const [deliveryEmail, setDeliveryEmail] = useState('');
     const [emailError, setEmailError] = useState('');
     const [quantity, setQuantity] = useState(1);
+    const [showPaymentModal, setShowPaymentModal] = useState(false);
     const { showToast } = useToast();
     const router = useRouter();
     const t = useTranslations('Checkout');
@@ -41,29 +43,45 @@ export default function CheckoutForm({ product, locale }: { product: any, locale
         setQuantity(val);
     };
 
-    const handlePayment = async () => {
+    const handlePaymentClick = () => {
         if (!validateEmail(deliveryEmail)) {
             setEmailError(t('invalidEmail'));
             return;
         }
+        setShowPaymentModal(true);
+    };
 
+    const handlePaymentConfirm = async (method: string) => {
         setLoading(true);
+        // Close modal immediately or keep it open? 
+        // Let's keep it open showing processing, but the modal handles its own processing state.
+        // Actually, the modal calls onConfirm AFTER its own processing simulation.
+        // So here we just do the API call.
+
         try {
             const res = await fetch('/api/orders', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ productId: product.id, deliveryEmail, quantity })
+                body: JSON.stringify({
+                    productId: product.id,
+                    deliveryEmail,
+                    quantity,
+                    paymentMethod: method
+                })
             });
 
             if (res.ok) {
+                setShowPaymentModal(false);
                 showToast(t('paymentSuccess'), 'success');
                 router.push(`/${locale}/orders`);
                 router.refresh();
             } else {
                 const data = await res.json();
+                setShowPaymentModal(false);
                 showToast(data.error || data.message || t('paymentFailed'), 'error');
             }
         } catch (e) {
+            setShowPaymentModal(false);
             showToast(t('paymentFailed'), 'error');
         } finally {
             setLoading(false);
@@ -136,7 +154,7 @@ export default function CheckoutForm({ product, locale }: { product: any, locale
             </div>
 
             <button
-                onClick={handlePayment}
+                onClick={handlePaymentClick}
                 disabled={isPayDisabled}
                 className="btn btn-primary"
                 style={{
@@ -150,6 +168,15 @@ export default function CheckoutForm({ product, locale }: { product: any, locale
             >
                 {loading ? 'Processing...' : `${t('pay')} $${(product.price * quantity).toFixed(2)}`}
             </button>
+
+            <PaymentModal
+                isOpen={showPaymentModal}
+                onClose={() => setShowPaymentModal(false)}
+                onConfirm={handlePaymentConfirm}
+                amount={product.price * quantity}
+                currency="USD"
+                t={t}
+            />
         </div>
     );
 }

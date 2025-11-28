@@ -47,6 +47,8 @@
         "invalidEmail": "请输入有效的邮箱地址",
         "total": "总计",
         "pay": "支付",
+        "selectPaymentMethod": "选择支付方式",
+        "processing": "处理中...",
         "paymentSuccess": "支付成功！",
         "paymentFailed": "支付失败"
     },
